@@ -1,4 +1,4 @@
-package me.pushy.example;
+package me.abdallah.example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

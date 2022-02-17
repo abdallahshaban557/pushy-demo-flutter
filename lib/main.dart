@@ -38,7 +38,7 @@ class Main extends StatelessWidget {
         // Light theme with dark action bar
         brightness: Brightness.light,
         primaryColor: Colors.grey[900],
-        accentColor: Colors.redAccent,
+        // accentColor: Colors.redAccent,
       ),
       home: PushyDemo(),
     );
@@ -64,7 +64,7 @@ class _PushyDemoState extends State<PushyDemo> {
   Future<void> initPlatformState() async {
     // Start the Pushy service
     Pushy.listen();
-    
+
     // Enable FCM Fallback Delivery
     Pushy.toggleFCM(true);
 
@@ -120,7 +120,7 @@ class _PushyDemoState extends State<PushyDemo> {
               title: Text('Notification clicked'),
               content: Text(message),
               actions: [
-                FlatButton(
+                TextButton(
                   child: Text('OK'),
                   onPressed: () {
                     Navigator.of(context, rootNavigator: true).pop('dialog');
